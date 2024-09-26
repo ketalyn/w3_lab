@@ -4,21 +4,131 @@
   </head>
   <body>
     <a-scene>
-      <a-box position="-1 0.5 -3" rotation="0 45 0" color="#4CC3D9"></a-box>
-      <a-sphere position="0 1.25 -5" radius="1.25" color="#EF2D5E"></a-sphere>
-      <a-cylinder
-        position="1 0.75 -3"
-        radius="0.5"
-        height="1.5"
-        color="#FFC65D"
-      ></a-cylinder>
-      <a-plane
-        position="0 0 -4"
-        rotation="-90 0 0"
-        width="4"
-        height="4"
-        color="#7BC8A4"
-      ></a-plane>
+      <a-assets>
+        <img id="texture" src="./assets/download.jpg">
+        <video id="video" autoplay loop="true" src="./assets/background.mp4"></video>
+        <a-asset-item id="desk" src="./assets/desk.glb"></a-asset-item>
+        <a-asset-item id="hourglass" src="./assets/hourglass.glb"></a-asset-item>
+        <a-asset-item id="planet1" src="./assets/planet_of_phoenix.glb"></a-asset-item>
+        <a-asset-item id="planet2" src="./assets/planet_afroditi.glb"></a-asset-item>
+        <a-asset-item id="planet3" src="./assets/planet_earth.glb"></a-asset-item>
+        <a-asset-item id="planet4" src="./assets/purple_planet.glb"></a-asset-item>
+        <a-asset-item id="blackhole" src="./assets/gargantua_the_black_hole.glb"></a-asset-item>
+        <a-asset-item id="mountain" src="./assets/great_mountain.glb"></a-asset-item>
+        <a-asset-item id="auk" src="./assets/geirfugl__great_auk.glb"></a-asset-item>
+        <a-asset-item id="nova" src="./assets/supernova_remnant__lighting_2.glb"></a-asset-item>
+        <a-asset-item id="coral" src="./assets/pavona_coral.glb"></a-asset-item>
+        <a-asset-item id="coral2" src="./assets/crescent_moon_coral.glb"></a-asset-item>
+        <a-asset-item id="dandelion" src="./assets/cc0___dandelion_taraxacum_sp..glb"></a-asset-item>
+        <a-asset-item id="planet5" src="./assets/alien_planet.glb"></a-asset-item>
+        <a-asset-item id="blackhole2" src="./assets/black_hole.glb"></a-asset-item>
+        <a-asset-item id="crab" src="./assets/dancing_crab_-_uca_mjoebergi.glb"></a-asset-item>
+      </a-assets>
+
+      <a-videosphere src="#video"
+      scale="0.6 0.6 0.6"
+    ></a-videosphere>
+      
+      <a-entity gltf-model ="#desk"
+        scale="0.3 0.3 0.3"
+        position="0.3 0.8 -10"
+        rotation="0 90 0"
+      ></a-entity>
+
+      <a-entity gltf-model="#hourglass"
+        scale="0.03 0.03 0.03"
+        position="1.6 -1.5 -9.8"
+      ></a-entity>
+
+      <a-entity gltf-model="#planet1"
+        scale="0.3 0.3 0.3"
+        position="-1 1.9 -10"
+      ></a-entity>
+
+      <a-entity gltf-model="#planet2"
+      scale="0.1 0.1 0.1"
+      position="2.5 1.8 -9"
+    ></a-entity>
+
+    <a-entity gltf-model="#planet3"
+    scale="0.003 0.003 0.003"
+    position="-1.2 1.6 -10"
+  ></a-entity>
+
+  <a-entity gltf-model="#planet4"
+      scale="0.4 0.4 0.4"
+      position="-2.4 -1 -10"
+  ></a-entity>
+
+  <a-entity gltf-model="#blackhole"
+      scale="0.3 0.3 0.3"
+      position="2.2 1.3 -7"
+      rotation="0 90 0"
+  ></a-entity>
+
+  <a-entity gltf-model="#mountain"
+  scale="0.0004 0.0004 0.0004"
+  position="-0.6 0.6 -9.5"
+  rotation="0 90 0"
+></a-entity>
+
+<a-entity gltf-model="#nova"
+  scale="1 1 1"
+  position="-5 4 -10"
+  rotation="0 90 0"
+></a-entity>
+
+<a-entity gltf-model="#auk"
+  scale="1 1 1"
+  position="2 1.35 -10"
+  rotation="0 90 0"
+></a-entity>
+
+<a-entity gltf-model="#coral"
+  scale="0.8 0.8 0.8"
+  position="2.3 -0.5 -6.5"
+  rotation="0 90 0"
+></a-entity>
+
+<a-entity gltf-model="#coral2"
+  scale="2 2 2"
+  position="2.3 -1.5 -6"
+  rotation="0 90 0"
+></a-entity>
+
+<a-entity gltf-model="#dandelion"
+  scale="4 4 4"
+  position="-2.5 -0.3 -9.8"
+  rotation="0 180 0"
+></a-entity>
+
+<a-entity gltf-model="#planet5"
+  scale="4 4 4"
+  position="-8 -2 -8"
+  rotation="0 90 0"
+></a-entity>
+
+<a-entity gltf-model="#blackhole2"
+  scale="0.005 0.005 0.005"
+  position="3 4 -14"
+  rotation="0 150 0"
+></a-entity>
+
+<a-entity gltf-model="#crab"
+  scale="0.1 0.1 0.1"
+  position="0 1.2 -10"
+  rotation="0 180 0"
+></a-entity>
+
+
+      <a-entity light="color: #e3f3f2; intensity:1" position="-1 1 0"></a-entity>
+      <a-entity light="type: ambient; color: #ffedb8; intensity:0.5"></a-entity>
+      <a-entity light="type: directional; color: #FFF; intensity: 0.5" position="-0.5 1 1"></a-entity>
+      <a-scene fog="type: linear; color: #AAA"></a-scene>
+
+
+    
+
       <a-sky color="#ECECEC"></a-sky>
     </a-scene>
   </body>
